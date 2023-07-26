@@ -1,13 +1,12 @@
 body {
     display: grid;
     grid-template-areas:
-        'header'
-        'main'
-        'aside'
-        'footer';
-    grid-template-rows: auto 1fr auto auto;
-    grid-template-columns: 1fr;
+        'header header'
+        'main aside'
+        'footer footer';
+    grid-template-columns: 2fr 1fr;
     font-family: Arial, sans-serif;
+    height: 100vh;
 }
 
 
@@ -78,6 +77,7 @@ main {
 
 aside {
     grid-area: aside;
+    order:2
 }
 
 
@@ -122,4 +122,7 @@ footer {
             'footer footer';
         grid-template-columns: 2fr 1fr;
     }
+}
+main.row {
+    flex-wrap: nowrap;
 }
